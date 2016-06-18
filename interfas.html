@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script type="text/javascript" src="vali.js"></script>
+</head>
+<body>
+    <form action="formulariocorporal.php" method="get" onSubmit="return validar();">
+        <h1 >Formulaario PGC</h1>
+        <br><br>
+        <label for="nombre">Ingrese su nombre:</label>
+    	<input type="text" placeholder="Nombre" id="nombre" name="nombre">
+    	<br><br>
+
+    	 <label for="edad">Ingrese su edad:</label>
+    	<input type="text" placeholder="Edad" id="edad" maxlength="3" name="edad">
+    	<br><br>
+
+    	<label for="peso">Ingrese su peso:</label>
+    	<input type="integer" placeholder="su peso" maxlength="3" id="peso" name="peso">
+       	<br><br>
+
+    	<h3>Sexo:</h3><br>
+    	<input type="radio" name="sexo" value="Masculino" onclick="muestra('m'); oculta('f')">Masculino
+    	<br>
+        <input type="radio" name="sexo" value="Femenino" onclick="muestra('f'); oculta('m')">Femenino
+        <br><br>
+    
+         <div id="m">
+        <label for="cuello">Log. cuello: </label>
+        <input type="text" id="cuello"  maxlength="3" name="cuello1">
+        <br><br>
+
+        <label for="cintura">Log. cintura: </label>
+        <input type="text" id="cintura" maxlength="3" name="cintura1">
+        <br><br>
+
+        <label for="altura">Log. altura: </label>
+        <input type="text" id="altura" maxlength="3" name="altura1">
+        <br><br>
+        </div>
+        
+        <div id="f">
+    	<label for="cue">Log. cuello: </label>
+    	<input type="text" id="cuello"  maxlength="3" name="cuello">
+    	<br><br>
+
+    	<label for="cin">Log. cintura: </label>
+    	<input type="text" id="cintura" maxlength="3" name="cintura">
+    	<br><br>
+
+        <label for="altu">Log. altura: </label>
+        <input type="text" id="altura" maxlength="3" name="altura">
+        <br><br>
+
+        <label for="cadera">Log. cadera: </label>
+        <input type="text" id="cadera" maxlength="3" name="cadera">
+        <br>
+        </div>
+       
+    	<button type="subimit" name="envio" > Calcular </button>
+    	
+
+    </form>
+</body>
+</html>
